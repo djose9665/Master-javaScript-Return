@@ -34,5 +34,5 @@ else{
   alert("Error, introduce numeros correctos");
 }
   
-console.log(primer_numero, segundo_numero);
+// console.log(primer_numero, segundo_numero);
 
