@@ -5,12 +5,9 @@
    * que se pueden utilizar indefinidamente 
    */
 
-function despertar(){
-  console.log("Ya es hora de despertar");
-  console.log("Son las 6 AM");
-
-  // return "Funcion";
+function despertar(hora, actividad){
+  console.log("Me levanto a las " + hora + " y lo primero que hago es " + actividad);  
 }
 
 // Asi se manda llamar una funcion
-despertar();
+// despertar();
