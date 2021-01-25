@@ -11,3 +11,12 @@ function despertar(hora, actividad){
 
 // Asi se manda llamar una funcion
 // despertar();
+
+function enfermedad(sintoma1, sintoma2, confirmacion = false){
+  if(confirmacion == true){
+    alert("CUIDADO!!! " + "\n" + "El primer sintoma es: " + sintoma1 + "\n" + "El segundo sintoma es: " +sintoma2);
+  }
+  else{
+    document.write("Falsa alarma!!" + "<br>" + "El sintoma de " + sintoma1 + " y el sintoma de " + sintoma2 + " es por gripa comun");
+  }
+}
