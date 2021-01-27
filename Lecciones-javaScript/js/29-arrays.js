@@ -8,4 +8,22 @@ var nombres_hombres = ["Daniel", "Jose", "Fernado", "Rodrigo", "Pedro"];
 
 // Objeto
 var nombres_mujeres = new Array("Maria", "Jenifer", "Diana", "Andrea");
-document.write(nombres_hombres[0], nombres_mujeres[1]);
+// console.log(nombres_hombres.length);
+
+// Practica: Mostrar el elemnto del array que el usuario indique
+/*
+  var elemento = parseInt(prompt("Que elemento del array quieres?"));
+  if(elemento >= nombres_hombres.length){
+    alert("Numero desconocido, el numero debe se menor a " + nombres_hombres.length);
+  }else{
+    console.log("El susuario seleccionado es: " + nombres_hombres[elemento]);
+  }
+*/
+
+var lenguajes_de_programacion = ["JavaScript", "PHP", "JAVA", "C#", "Python"];
+document.write("<h2>Lenguajes de programacion del 2021</h2>");
+document.write("<ol>");
+for(var i = 0; i < lenguajes_de_programacion.length; i++){
+  document.write("<li>" + lenguajes_de_programacion[i] +"</li>");
+}
+document.write("</ol>");
