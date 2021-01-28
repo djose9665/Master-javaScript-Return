@@ -5,6 +5,12 @@
 var categorias = ["Accion", "Terror", "Comedia", "Drama", "Triller", "Romance", "Suspenso"];
 var peliculas = ["El transportador", "La cabaña", "Los miller", "30 dias de oscuridad"];
 
+// Odenar un array 
+// peliculas.sort(); // Orden alfabetico
+peliculas.reverse(); // Invirte el array
+
+console.log(peliculas);
+
 // Este es un array multidimensional
 var cine = [categorias, peliculas];
 
