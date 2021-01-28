@@ -22,8 +22,19 @@ var nombres_mujeres = new Array("Maria", "Jenifer", "Diana", "Andrea");
 
 var lenguajes_de_programacion = ["JavaScript", "PHP", "JAVA", "C#", "Python"];
 document.write("<h2>Lenguajes de programacion del 2021</h2>");
-document.write("<ol>");
-for(var i = 0; i < lenguajes_de_programacion.length; i++){
-  document.write("<li>" + lenguajes_de_programacion[i] +"</li>");
-}
-document.write("</ol>");
+document.write("<ul>");
+/*
+  for(var i = 0; i < lenguajes_de_programacion.length; i++){
+    document.write("<li>" + lenguajes_de_programacion[i] +"</li>");
+  }
+  document.write("</ol>");
+*/
+
+// Otra manera de recorrer el Array es... 
+// 
+  lenguajes_de_programacion.forEach((elemento, index, otro_elemento)=>{
+  console.log(otro_elemento); // Este tercer elemento del bucle es muestra el array completo de la variable seleccionada
+  document.write("<li>"+ index + " - " + elemento +"</li>");
+});
+
+document.write("</ul>");
