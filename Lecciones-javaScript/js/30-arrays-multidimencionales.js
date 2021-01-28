@@ -8,5 +8,36 @@ var peliculas = ["El transportador", "La cabaña", "Los miller", "30 dias de osc
 // Este es un array multidimensional
 var cine = [categorias, peliculas];
 
-console.log(cine[0][1]);
-console.log(cine[1][3]);
+// console.log(cine[0][1]);
+// console.log(cine[1][3]);
+
+// Añadir un elemento a un array
+// peliculas.push("Superman");
+
+/*
+  var nueva_pelicula = "";
+  do{
+    nueva_pelicula = prompt("Ingresa una nueva pelicula a la lista");
+    peliculas.push(nueva_pelicula);
+  }
+  while(nueva_pelicula != "OK")
+*/
+// Pop(): Elimina el ultimo elemento de un array
+// peliculas.pop();
+
+// Para borrar un elemento de un array que se encuentre en cualquier posision se hace esto...
+
+// 1. Se ubica el elemento que se quiere eliminar utilizando indexOf()
+var indice = peliculas.indexOf("El transportador");
+// 2. Con una condicion comprobamos que realmente esta el elemento
+// La condicion dice si el elemnto es mayor a -1 si se encuentra en el array... Ya que si fuera igual o menor a -1 no se encontraria 
+if(indice > -1){
+  // Con el numero se indican las posiciones que se quieren eliminar... Si se pone 2, serian dos elementos eliminados
+  peliculas.splice(indice, 1);
+}
+
+// Convertir un array a texto separado por coma
+
+var lista_pelicula = peliculas.join();
+
+console.log(lista_pelicula);
