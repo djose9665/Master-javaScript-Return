@@ -40,4 +40,12 @@ if(indice > -1){
 
 var lista_pelicula = peliculas.join();
 
-console.log(lista_pelicula);
+// console.log(lista_pelicula);
+
+// convertir un String a un array
+
+var canciones = "Lovers on the sun, La vuelta al mundo, Rene, La bala";
+
+var array_canciones = canciones.split(", ");
+
+console.log(array_canciones);
