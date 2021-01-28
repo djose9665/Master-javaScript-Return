@@ -5,6 +5,11 @@
 var categorias = ["Accion", "Terror", "Comedia", "Drama", "Triller", "Romance", "Suspenso"];
 var peliculas = ["El transportador", "La cabaña", "Los miller", "30 dias de oscuridad"];
 
+// Otra manera de recorrer un array
+for(let pelicula in peliculas){
+  document.write(peliculas[pelicula] + "<br>");
+}
+
 // Odenar un array 
 // peliculas.sort(); // Orden alfabetico
 peliculas.reverse(); // Invirte el array
