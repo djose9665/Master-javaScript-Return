@@ -5,6 +5,28 @@
 var categorias = ["Accion", "Terror", "Comedia", "Drama", "Triller", "Romance", "Suspenso"];
 var peliculas = ["El transportador", "La cabaña", "Los miller", "30 dias de oscuridad"];
 
+// Para hacer una busqueda en una array
+// var busqueda = peliculas.find(function(pelicula){
+  // var busqueda = peliculas.find(pelicula => pelicula == "El transportador");
+  var busqueda = peliculas.findIndex(pelicula => pelicula == "El transportador");;
+
+  var precios = [15, 40, 74, 36,589];
+  var buscar_precio = precios.some(precio => precio > 100);
+  console.log(buscar_precio)  
+
+console.log(busqueda);
+
+// Otra manera de recorrer un array
+// for(let pelicula in peliculas){
+  // document.write(peliculas[pelicula] + "<br>");
+// }
+
+// Odenar un array 
+// peliculas.sort(); // Orden alfabetico
+peliculas.reverse(); // Invirte el array
+
+// console.log(peliculas);
+
 // Este es un array multidimensional
 var cine = [categorias, peliculas];
 
@@ -40,4 +62,12 @@ if(indice > -1){
 
 var lista_pelicula = peliculas.join();
 
-console.log(lista_pelicula);
+// console.log(lista_pelicula);
+
+// convertir un String a un array
+
+var canciones = "Lovers on the sun, La vuelta al mundo, Rene, La bala";
+
+var array_canciones = canciones.split(", ");
+
+// console.log(array_canciones);
