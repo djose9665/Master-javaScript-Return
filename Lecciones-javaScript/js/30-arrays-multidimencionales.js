@@ -8,7 +8,7 @@ var peliculas = ["El transportador", "La cabaña", "Los miller", "30 dias de osc
 // Para hacer una busqueda en una array
 // var busqueda = peliculas.find(function(pelicula){
   // var busqueda = peliculas.find(pelicula => pelicula == "El transportador");
-  var busqueda = peliculas.findIndex(pelicula => pelicula == "El transportador");;
+  var busqueda = peliculas.findIndex(pelicula => pelicula == "El transportador");
 
   var precios = [15, 40, 74, 36,589];
   var buscar_precio = precios.some(precio => precio > 100);
