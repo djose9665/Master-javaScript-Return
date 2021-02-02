@@ -29,3 +29,25 @@ todos_los_divs[3].style.padding = "12px";
 
 
 // Conseguir elementos por su clase
+
+var divs_rojos = document.getElementsByClassName("rojo");
+for(var div in divs_rojos){
+  if(divs_rojos[div].className == "rojo"){
+    divs_rojos[div].style.background = 'red';
+  }
+}
+
+var divs_amarillos  = document.getElementsByClassName('amarillo');
+for(var div_amarillo in divs_amarillos){
+  if(divs_amarillos[div_amarillo].className == "amarillo"){
+    console.log(divs_amarillos[div_amarillo].textContent);
+    divs_amarillos[div_amarillo].style.background = "yellow";
+  }
+}
+
+// Query Selector
+var id = document.querySelector("#dom");
+console.log(id);
+// Nota: Query Selector solo muestra el primer elemento de una clase seleccionada.
+var claseRojo = document.querySelector(".rojo");
+console.log(claseRojo);
