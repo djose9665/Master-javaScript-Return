@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Script -->
+  <script type="text/javascript" src="js/37-ejercicio-10.js"></script>
+  <!-- Style -->
+  <style>
+    .box{
+      width: 200px;
+      height: 250px;
+      float: left;
+      margin: 20px;
+    }
+    .dashed{
+      border: 3px dashed black;
+      border-radius: 12px;
+      padding: 5px;
+    }
+  </style>
+  <title>Formulario</title>
+</head>
+<body>
+  <h1>Ejercicio DOM, Eventos y Funciones</h1>
+  <!-- 
+    1. Formulario con campos: Nombre, Apellidos y Edad
+    2. Boton de Enviar formulario: evento submit
+    3. Mostrar datos por pantalla
+   -->
+
+  <div class="box">
+    <form action="#" method="POST" id="formulario" onsubmit="return false">
+      <h2>Formulario</h2>
+      <p>
+        <label for="nombre">Nombre</label> <br>
+        <input id="txt_nombre" type="text" name="nombre">
+      </p>
+      <p>
+        <label for="apellidos">Apellidos</label><br>
+        <input id="txt_apellidos" type="text" name="apellidos">
+      </p>
+      <p>
+        <label for="edad">Edad</label><br>
+        <input id="txt_edad" type="number" name="edad">
+      </p>
+      
+      <input id="btn_enviar" type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <div class="box dashed">
+    <h2>Tus Datos</h2>
+    <hr>
+    <p id="p_nombre">
+      Nombre: <span></span>
+    </p>
+    <p id="p_apellidos">
+      Apellidos: <span></span>
+    </p>
+    <p id="p_edad">
+      Edad: <span></span>
+    </p>
+  </div>
+</body>
+</html>
