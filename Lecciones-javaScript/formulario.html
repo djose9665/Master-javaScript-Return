@@ -27,7 +27,8 @@
     1. Formulario con campos: Nombre, Apellidos y Edad
     2. Boton de Enviar formulario: evento submit
     3. Mostrar datos por pantalla
-   -->
+    4. Validacion del formulario
+  -->
 
   <div class="box">
     <form action="#" method="POST" id="formulario" onsubmit="return false">
@@ -35,14 +36,17 @@
       <p>
         <label for="nombre">Nombre</label> <br>
         <input id="txt_nombre" type="text" name="nombre">
+        <span id="error_nombre"></span>
       </p>
       <p>
         <label for="apellidos">Apellidos</label><br>
         <input id="txt_apellidos" type="text" name="apellidos">
+        <span id="error_apellidos"></span>
       </p>
       <p>
         <label for="edad">Edad</label><br>
         <input id="txt_edad" type="number" name="edad">
+        <span id="error_edad"></span>
       </p>
       
       <input id="btn_enviar" type="submit" value="Enviar">
