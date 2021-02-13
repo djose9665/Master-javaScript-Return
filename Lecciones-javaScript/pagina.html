@@ -7,14 +7,28 @@
   <!-- Scripts -->
   <!-- 
     <script type="text/javascript" src="js//38-json.js"></script> 
+    <script type="text/javascript" src="js/39-localstorage.js"></script>
   -->
-  <script type="text/javascript" src="js/39-localstorage.js"></script>
+  <script type="text/javascript" src="js/40-localstorage.js"></script>
 </head>
 <body>
-  <div id="bebidas">
-  </div>
-  <div id="datos">
+  <h2>Añade tu pelicula</h2>
+  <form id="form_peliculas" action="">
+    <input id="txt_peliculas" type="text">
+    <button type="submit">Añadir</button>
+  </form>
 
+  <h2>Borra una pelicula</h2>
+  <form id="form_borrar_pelicula" action="">
+    <input id="txt_borrar_pelicula" type="text">
+    <button type="submit">Borrar</button>
+  </form>
+
+  <h3>Peliculas</h3>
+  <div id="box_peliculas">
+    <ul id="peliculas_list">
+
+    </ul>
   </div>
   
 </body>
