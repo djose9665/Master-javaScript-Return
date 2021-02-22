@@ -27,6 +27,9 @@ window.addEventListener('load', function(){
         .then(data => data.json())
         .then(janet =>{
           mostrarJanet(janet.data);
+        })
+        .catch(error =>{
+          console.log("Mi error: " + error);
         });
         
         
