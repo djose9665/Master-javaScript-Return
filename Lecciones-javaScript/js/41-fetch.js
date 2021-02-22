@@ -7,20 +7,28 @@ window.addEventListener('load', function(){
     var usuarios_2 = [];
 
   var box_usuarios = document.querySelector('#box_usuarios');
+  var box_persona = document.querySelector('#box_persona');
   var box_janet = document.querySelector('#div_janet');
 
       getUusarios()
         .then(data => data.json())
         .then(users =>{
-          
           listarUsuarios(users);
 
-          return getJanet();
+          
+          return getInfo();
+                   
+        })
+        .then(data => {
+          console.log("Persona" + data);
+          box_persona.innerHTML = data;
+          return getJanet()          
         })
         .then(data => data.json())
         .then(janet =>{
           mostrarJanet(janet.data);
         });
+        
         
 
   fetch('https://reqres.in/api/users')
@@ -29,6 +37,37 @@ window.addEventListener('load', function(){
           usuarios_2 = users.data;
           console.log(usuarios_2);
         });
+
+  function getUusarios(){
+    return fetch('https://jsonplaceholder.typicode.com/users');
+  }
+
+  function getJanet(){
+    return fetch('https://reqres.in/api/users/2');
+  }
+
+  // Crear una promesa
+
+  function getInfo(){
+    var persona = {
+      nombre: "Jose Daniel",
+      apellidos: "Martinez Sariñana",
+      sitio: "djjson.online"
+    };
+
+    return new Promise((resolve, reject)=>{
+      var persona_string = "";
+      
+      setTimeout(function(){
+        persona_string = JSON.stringify(persona);
+        if(typeof persona_string != 'string' || persona_string == '') return reject("Error");
+  
+        return resolve(persona_string);
+        
+      },4000);
+    }); 
+    
+  }
         
   function listarUsuarios(usuarios_1){
     usuarios_1.map((user, i)=>{
@@ -54,12 +93,7 @@ window.addEventListener('load', function(){
       document.querySelector('#div_janet .loading').style.display = 'none';
   }
 
-  function getUusarios(){
-    return fetch('https://jsonplaceholder.typicode.com/users');
-  }
-
-  function getJanet(){
-    return fetch('https://reqres.in/api/users/2');
-  }
   
+
+
 });
