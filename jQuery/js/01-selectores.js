@@ -40,6 +40,13 @@ $('#p_verde').css("background", "green")
   $('[title="Facebook"]').css('background', 'blue');
   $('[title="Twitter"]').css('background', 'gray');
 
+  // Otros
+  // $('p,a').addClass('margen-superior');
+
+  // var busqueda = $('#div_list .resaltado').eq(0).parent().parent().parent().find('[title="Google"]');
+  var busqueda = $('#elemento').parent().parent().find(".resaltado");
+  console.log(busqueda);
+
 
 
 });
