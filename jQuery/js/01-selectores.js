@@ -34,6 +34,12 @@ $('#p_verde').css("background", "green")
     }
   });
 
+// Selectores por atributo
+  $('[title="Google"]').css('background', '#ccc');
+  $('[title="Instagram"]').css('background', 'pink');
+  $('[title="Facebook"]').css('background', 'blue');
+  $('[title="Twitter"]').css('background', 'gray');
+
 
 
 });
