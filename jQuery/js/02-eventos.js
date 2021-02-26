@@ -32,4 +32,14 @@ $(document).ready(function(){
     $(this).css("background", "pink");
   });
 
+  var txt_nombre = $('#txt_nombre');
+  txt_nombre.focus(function(){
+    $(this).css("border", "2px solid green");
+  });
+
+  txt_nombre.blur(function(){
+    $(this).css("border", "1px solid #000");
+    // $('#datos').css("display", "block");
+    $('#datos').text($(this).val()).show();
+  });
 });
