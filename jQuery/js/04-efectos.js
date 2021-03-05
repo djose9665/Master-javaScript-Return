@@ -5,6 +5,7 @@ $(document).ready(function(){
   var btn_ocultar = $('#btn_ocultar');
 
   var btn_todo = $('#btn_todo');
+  var btn_animar = $('#btn_animar');
 
   btn_mostrar.hide();
 
@@ -31,6 +32,30 @@ $(document).ready(function(){
     // div_caja.toggle('normal');
     div_caja.fadeToggle('normal');
     // div_caja.slideToggle('normal');
+  });
+
+  btn_animar.click(function(){
+    div_caja.animate({
+      marginLeft: '500px',
+      fontSize: '40px',
+      height: '110px'
+    }, 'slow')
+      .animate({
+        marginTop: '80px',
+        borderRadius: '900px',
+
+      },'slow')
+      .animate({
+        borderRadius: '0px',
+        marginLeft: '0px'
+      }, 'slow')
+      .animate({
+        borderRadius: '100px',
+        marginTop: '0px'
+      }, 'slow')
+      .animate({
+        marginLeft: '500px'
+      });
   });
 
 });
