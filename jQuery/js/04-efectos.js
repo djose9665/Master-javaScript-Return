@@ -16,6 +16,7 @@ $(document).ready(function(){
     // div_caja.fadeIn('slow');
     // div_caja.fadeTo('slow', '1');
     div_caja.slideDown('slow');
+    console.log("");
   });
 
 
@@ -25,7 +26,9 @@ $(document).ready(function(){
     // div_caja.hide('normal');
     // div_caja.fadeOut('slow');
     // div_caja.fadeTo('slow', '0');
-    div_caja.slideUp('slow');
+    div_caja.slideUp('slow', function(){
+      console.log("La caja se oculto");
+    });
   });
 
   btn_todo.click(function(){
