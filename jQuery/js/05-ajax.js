@@ -14,7 +14,7 @@ $(document).ready(function(){
   });
 
   $.get("https://reqres.in/api/unknown",{page: 2}, function(response){
-    console.log(response);
+    // console.log(response);
     response.data.forEach((element, index)=>{
       datos.append("<p>" + index + " " + element.name + "</p>");
     });
@@ -34,14 +34,33 @@ $(document).ready(function(){
       web: $('input[name="txt_web"]').val(),
       email: $('input[name="txt_email"]').val()
     };
-    console.log(usuario);
+    // console.log(usuario);
   
     // $.post("https://reqres.in/api/users", usuario, function(response){
-      $.post($(this).attr("action"), usuario, function(response){
+    /*$.post($(this).attr("action"), usuario, function(response){
       console.log(response);
     }).done(function(){
       alert("Usuario registrado correctamente");
+    });*/
+
+    $.ajax({
+      type: 'POST',
+      // dataType: 'json',
+      // contentType: 'applicaciont/json'
+      url: $(this).attr("action"),
+      data: usuario,
+      beforeSend: function(){
+        console.log("Enviando Usuario...");
+      },
+      success: function(response){
+        console.log(response);
+      },
+      error: function (){
+        console.log("A ocurrido un error");
+      },
+      timeout: 2000,
     });
+
     return false;
   });
 
