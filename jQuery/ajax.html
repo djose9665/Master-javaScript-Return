@@ -11,6 +11,7 @@
 
   <style>
     #div_datos{
+      margin-top: 15px;
       border: 2px solid green;
       width: 250px;
       height: 250px;
@@ -20,6 +21,14 @@
 </head>
 <body>
   <h2>Ajax</h2>
+
+  <form action="https://reqres.in/api/users" method="POST" id="form_registro">
+    <input type="text" name="txt_nombre" placeholder="Nombre">
+    <input type="text" name="txt_web" placeholder="Pagina web">
+    <input type="email" name="txt_email" placeholder="Correo">
+    <input type="submit" id="btn_enviar" value="Registrar">
+  </form>
+
   <div id="div_datos">
 
   </div>
