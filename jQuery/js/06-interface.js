@@ -1,6 +1,8 @@
 $(document).ready(function(){
   var elementos = $('.elemento');
   var lista = $('.lista-seleccionable');
+  var area = $('#area');
+  var elemento =$('#elemento_movido');
 
   // Evento Draggable (Permite mover elementos de la pagina)
   elementos.draggable();
@@ -15,6 +17,13 @@ $(document).ready(function(){
   lista.sortable({
     update: function(event, ui){
       console.log("La lista ha cambiado");
+    }
+  });
+
+  elemento.draggable();
+  area.droppable({
+    drop: function(){
+      console.log("Entro un elemento");
     }
   });
 });
