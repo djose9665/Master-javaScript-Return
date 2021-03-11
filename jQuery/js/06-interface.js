@@ -3,6 +3,10 @@ $(document).ready(function(){
   var lista = $('.lista-seleccionable');
   var area = $('#area');
   var elemento =$('#elemento_movido');
+  var btn_mostrar = $('#btn_mostrar');
+  var caja_efectos = $('.caja_efectos');
+
+
 
   // Evento Draggable (Permite mover elementos de la pagina)
   elementos.draggable();
@@ -25,5 +29,19 @@ $(document).ready(function(){
     drop: function(){
       console.log("Entro un elemento");
     }
+  });
+
+
+  // Efectos
+  btn_mostrar.click(function(){
+    // caja_efectos.toggle("fade");]
+    // caja_efectos.fadeToggle();
+    // caja_efectos.effect('explode');
+    // caja_efectos.toggle('explode');
+    caja_efectos.toggle('blind');
+    // caja_efectos.toggle('slide');
+    // caja_efectos.toggle('drop');
+    // caja_efectos.toggle('puff');
+    // caja_efectos.toggle();
   });
 });
