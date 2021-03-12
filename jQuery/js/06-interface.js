@@ -5,6 +5,8 @@ $(document).ready(function(){
   var elemento =$('#elemento_movido');
   var btn_mostrar = $('#btn_mostrar');
   var caja_efectos = $('.caja_efectos');
+  var popup = $('#popup');
+  var btn_lanzar = $('#lanzar_popup');
 
 
 
@@ -43,5 +45,13 @@ $(document).ready(function(){
     // caja_efectos.toggle('drop');
     // caja_efectos.toggle('puff');
     // caja_efectos.toggle();
+  });
+
+  // Tooltip
+  $(document).tooltip();
+
+  // Dialog
+  btn_lanzar.click(function(){
+    popup.dialog();
   });
 });
