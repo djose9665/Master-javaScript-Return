@@ -44,4 +44,8 @@ $(document).ready(function(){
     // caja_efectos.toggle('puff');
     // caja_efectos.toggle();
   });
+
+  // Tooltip
+  $(document).tooltip()
+
 });
