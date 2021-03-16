@@ -8,6 +8,7 @@ $(document).ready(function(){
   var popup = $('#popup');
   var btn_lanzar = $('#lanzar_popup');
   var txt_calendario = $('#txt_calendario');
+  var pestanas = $('#pestanas');
 
 
   // Evento Draggable (Permite mover elementos de la pagina)
@@ -57,4 +58,7 @@ $(document).ready(function(){
 
   // DatePicker
   txt_calendario.datepicker();
+
+  // Tabs
+  pestanas.tabs();
 });
