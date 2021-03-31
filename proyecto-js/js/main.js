@@ -1,7 +1,10 @@
 $(document).ready(function(){
   // Variables
   var slider = $('.bxslider');
-
+  var theme = $('#theme');
+  var tema_verde = $('#to-green');
+  var tema_rojo = $('#to-red');
+  var tema_azul = $('#to-blue');
   // Slider
     slider.bxSlider({
       mode: 'fade',
@@ -51,22 +54,16 @@ $(document).ready(function(){
   });
 
 
-  /*<article class="post">
-    <h2>Titulo del articulo</h2>
-    <span class="date">Fecha de publicacion</span>
-    <p >
-      Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, 
-      mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. 
-      Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. 
-      Suspendisse ex odio, volutpat id elementum at, ultrices id magna. Nam sed tellus justo. Etiam condimentum nulla eu varius tempus. 
-      Proin laoreet odio lorem, sed tempus neque fringilla et. Praesent sed pellentesque velit. Cras placerat porttitor turpis. 
-      Mauris nisl risus, congue blandit quam quis, elementum pellentesque leo. Nam sed tincidunt lacus. Etiam vitae lacus eget justo 
-      pretium elementum suscipit rutrum lacus. Maecenas quam leo, iaculis quis lectus et, sodales tristique est. 
-      Fusce sollicitudin dui vitae elit tincidunt, eget gravida ex eleifend.
-    </p>
-    <a href="#" class="button_more">Leer mas</a>
-  </article>*/
+  //Selector de tema
+  tema_verde.click(function(){
+    theme.attr("href", "css/green.css");
+  });
 
-  // console.log(posts);
+  tema_rojo.click(function(){
+    theme.attr("href", "css/red.css");
+  });
+  tema_azul.click(function(){
+    theme.attr("href", "css/blue.css");
+  });
 
 });
