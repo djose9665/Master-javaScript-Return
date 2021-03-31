@@ -8,11 +8,29 @@
 
   <!-- Estilos CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+  <!-- Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <!-- Moment JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+  
   <!-- JavaScript -->
   <script type="text/javascript" src="js/main.js"></script>
+
 </head>
 <body>
+  <div id="selector-theme">
+    <div id="to-green"></div>
+    <div id="to-red"></div>
+    <div id="to-blue"></div>
+  </div>
+
   <section id="global">
     <!-- Cabecera -->
     <header>
@@ -34,27 +52,17 @@
 
     <!-- Slider -->
     <div id="slider">
-
+      <div class="bxslider">
+        <div><img src="img/hojas.jpg" title="Hojas"></div>
+        <div><img src="img/rojo.jpg" title="Rojo"></div>
+        <div><img src="img/cielo.jpg" title="Cielo"></div>
+      </div>
     </div>
 
     <!-- Contenido -->
     <section id="content">
       <div id="post">
-        <article class="post">
-          <h2>Titulo del articulo</h2>
-          <span class="date">Fecha de publicacion</span>
-          <p >
-            Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, 
-            mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. 
-            Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. 
-            Suspendisse ex odio, volutpat id elementum at, ultrices id magna. Nam sed tellus justo. Etiam condimentum nulla eu varius tempus. 
-            Proin laoreet odio lorem, sed tempus neque fringilla et. Praesent sed pellentesque velit. Cras placerat porttitor turpis. 
-            Mauris nisl risus, congue blandit quam quis, elementum pellentesque leo. Nam sed tincidunt lacus. Etiam vitae lacus eget justo 
-            pretium elementum suscipit rutrum lacus. Maecenas quam leo, iaculis quis lectus et, sodales tristique est. 
-            Fusce sollicitudin dui vitae elit tincidunt, eget gravida ex eleifend.
-          </p>
-          <a href="#" class="button_more">Leer mas</a>
-        </article>
+        <!-- Cargar post desde un Json en JavaScript -->
       </div>
       <aside id="sidebar">
         <div id="about">
