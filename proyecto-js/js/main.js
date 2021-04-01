@@ -1,10 +1,14 @@
 $(document).ready(function(){
   // Variables
+  // Slider
   var slider = $('.bxslider');
+  // Temas
   var theme = $('#theme');
   var tema_verde = $('#to-green');
   var tema_rojo = $('#to-red');
   var tema_azul = $('#to-blue');
+  // Scroll
+  var subir = $('.subir');
   // Slider
     slider.bxSlider({
       mode: 'fade',
@@ -64,6 +68,17 @@ $(document).ready(function(){
   });
   tema_azul.click(function(){
     theme.attr("href", "css/blue.css");
+  });
+
+  // Scroll arriba
+  subir.click(function(e){
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+
+    return false;
   });
 
 });
