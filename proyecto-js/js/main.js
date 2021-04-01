@@ -1,10 +1,19 @@
 $(document).ready(function(){
   // Variables
+  // Slider
   var slider = $('.bxslider');
+  // Temas
   var theme = $('#theme');
   var tema_verde = $('#to-green');
   var tema_rojo = $('#to-red');
   var tema_azul = $('#to-blue');
+  // Scroll
+  var subir = $('.subir');
+  // Login
+  var login = $('#login');
+  
+
+
   // Slider
     slider.bxSlider({
       mode: 'fade',
@@ -65,5 +74,39 @@ $(document).ready(function(){
   tema_azul.click(function(){
     theme.attr("href", "css/blue.css");
   });
+
+  // Scroll arriba
+  subir.click(function(e){
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+
+    return false;
+  });
+
+  // Login falso
+  $('#login form').submit(function(){
+    var form_name = $('#form_name').val(); 
+
+    localStorage.setItem("form_name", form_name);
+    
+  });
+
+  var get_form_name = localStorage.getItem("form_name");
+
+  if(get_form_name != null && form_name != 'undefined'){
+    var about_parrafo = $('#about p');
+    about_parrafo.html("<br> <strong> Bienvenido, " + get_form_name + "</strong> ");
+    about_parrafo.append('<a href="#" id="logout">Cerrar sesion</a>');
+    
+    login.hide();   
+    $('#logout').click(function(){
+      localStorage.clear();
+      location.reload();
+    });
+  }
+
 
 });
