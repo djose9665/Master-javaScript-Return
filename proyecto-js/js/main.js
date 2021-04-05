@@ -15,6 +15,7 @@ $(document).ready(function(){
 
 
   // Slider
+  if(window.location.href.indexOf('index') > -1){
     slider.bxSlider({
       mode: 'fade',
       captions: true,
@@ -22,45 +23,48 @@ $(document).ready(function(){
       responsive: true,
       // pager: false
     });
+  }
 
   //Posts
-  var posts = [
-    {
-      title: "Prueba de titulo 1",
-      date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
-      content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
-    },
-    {
-      title: "Prueba de titulo 2",
-      date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
-      content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
-    },
-    {
-      title: "Prueba de titulo 3",
-      date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
-      content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
-    },
-    {
-      title: "Prueba de titulo 4",
-      date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
-      content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
-    },
-  ];
+  if(window.location.href.indexOf('index') > -1){
+    var posts = [
+      {
+        title: "Prueba de titulo 1",
+        date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
+        content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
+      },
+      {
+        title: "Prueba de titulo 2",
+        date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
+        content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
+      },
+      {
+        title: "Prueba de titulo 3",
+        date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
+        content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
+      },
+      {
+        title: "Prueba de titulo 4",
+        date: 'Publicado el día: ' + moment().format(' dddd ') + '' + moment().format(' Do ') + ' de ' + moment().format(' MMMM ') + ' del ' + moment().format(' YYYY'),
+        content: 'Praesent at auctor mauris. Curabitur laoreet fermentum ex egestas cursus. Integer cursus, mauris non pretium ultricies, turpis nulla luctus turpis, ac iaculis nisi lacus vitae magna. Vivamus urna diam, faucibus eu dapibus a, cursus vel ex. Nunc tempus ante condimentum dolor rutrum volutpat. Suspendisse ex odio, volutpat id elementum at, ultrices id magna' 
+      },
+    ];
 
-  posts.forEach((item, index) => {
-    var post = `
-    <article class="post">
-      <h2>${item.title}</h2>
-      <span class="date">${item.date}</span>
-      <p >
-        ${item.content}
-      </p>
-      <a href="#" class="button_more">Leer mas</a>
-    </article>
-    `;
-    // console.log(post);
-    $('#post').append(post);
-  });
+    posts.forEach((item, index) => {
+      var post = `
+      <article class="post">
+        <h2>${item.title}</h2>
+        <span class="date">${item.date}</span>
+        <p >
+          ${item.content}
+        </p>
+        <a href="#" class="button_more">Leer mas</a>
+      </article>
+      `;
+      // console.log(post);
+      $('#post').append(post);
+    });
+  }
 
 
   //Selector de tema
@@ -106,6 +110,11 @@ $(document).ready(function(){
       localStorage.clear();
       location.reload();
     });
+  }
+
+  if(window.location.href.indexOf('about') > -1){
+    var acordeon = $('#acordeon');
+    acordeon.accordion();
   }
 
 
