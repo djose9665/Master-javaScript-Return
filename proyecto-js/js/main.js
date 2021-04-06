@@ -112,9 +112,20 @@ $(document).ready(function(){
     });
   }
 
+  // Acordeon
   if(window.location.href.indexOf('about') > -1){
     var acordeon = $('#acordeon');
     acordeon.accordion();
+  }
+
+
+  // Reloj
+  if(window.location.href.indexOf('reloj') > -1){
+    setInterval(function(){
+      var reloj = moment().format("hh:mm:ss");
+      var div_reloj = $('#reloj');
+      div_reloj.html(reloj);
+    }, 1000);
   }
 
 
