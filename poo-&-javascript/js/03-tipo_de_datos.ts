@@ -1,11 +1,11 @@
 // String 
-let cadena: string = "Daniel Martinez";
+let cadena: string | number = "Daniel Martinez";
 
 // Number
-let edad: number = 45;
+let edad: number | boolean = 45;
 
 // boleano
-let verdadero_falso: boolean = true;
+let verdadero_falso: boolean | string = true;
 
 // Any
 let cualquiera: any = "Hola";
@@ -17,4 +17,20 @@ var lenguajes: Array<string> = ["JavaScript", "PHP", "JAVA"];
 
 let cancion: string[] = ["This is a war", "La vuelta al mundo", "Box"];
 
-console.log(cadena, edad, verdadero_falso, cualquiera, lenguajes, cancion); 
+// Mi tipo de dato
+type alfanumerico = string | number;
+
+var nuevo: alfanumerico = "hghjg";
+
+nuevo = 12;
+var numero1 = 13;
+if(nuevo == 12){
+  let nuevo: string = "Doce";
+  var numero1: number = 15;
+
+  console.log(nuevo, numero1);
+}
+
+
+
+console.log(cadena, edad, verdadero_falso, cualquiera, lenguajes, cancion, nuevo, numero1); 
