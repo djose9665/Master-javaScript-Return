@@ -8,12 +8,23 @@ window.addEventListener('load', function(){
     getColor();
   }
 
+  // Decorador
+  function estampar(logo: string){
+    return function(target: Function){
+      target.prototype.estampacion = function():void{
+        console.log("Camiseta estampada con el logo de " + logo);
+      }
+    }
+  }
+
   // Clase(Molde del objeto)
   // Propiedades (Caracteristicas del objeto)
   // Metodos (funciones o acciones del objeto)
 
   // Clase de una camiseta
+  @estampar('Nike')
   class Clases implements CamisetaBase{
+    [x:string]: any;
     // Propiedades
     private color: string;
     private modelo: string;
@@ -49,13 +60,16 @@ window.addEventListener('load', function(){
       return this.capucha;
     }
   }
+  var camiseta = new Clases("Rojo", "Manga larga", "Nike", "L", 250);
+  console.log(camiseta);
+  camiseta.estampacion();
+  
 
   var sudadera_nike = new Sudadera("gris", "Manga Larga", "Nike", "L", 400);
   sudadera_nike.setCapucha(true);
   sudadera_nike.setColor("Negro");
   console.log(sudadera_nike);
 
-  var camiseta = new Clases("Rojo", "Manga larga", "Nike", "L", 250);
-  console.log(camiseta);
+  
     
 });

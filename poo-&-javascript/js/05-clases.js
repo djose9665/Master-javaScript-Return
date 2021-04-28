@@ -14,8 +14,22 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 window.addEventListener('load', function () {
     // console.log("Clase");
+    // Decorador
+    function estampar(logo) {
+        return function (target) {
+            target.prototype.estampacion = function () {
+                console.log("Camiseta estampada con el logo de " + logo);
+            };
+        };
+    }
     // Clase(Molde del objeto)
     // Propiedades (Caracteristicas del objeto)
     // Metodos (funciones o acciones del objeto)
@@ -34,6 +48,9 @@ window.addEventListener('load', function () {
         Clases.prototype.getColor = function () {
             return this.color;
         };
+        Clases = __decorate([
+            estampar('Nike')
+        ], Clases);
         return Clases;
     }());
     var Sudadera = /** @class */ (function (_super) {
@@ -49,10 +66,11 @@ window.addEventListener('load', function () {
         };
         return Sudadera;
     }(Clases));
+    var camiseta = new Clases("Rojo", "Manga larga", "Nike", "L", 250);
+    console.log(camiseta);
+    camiseta.estampacion();
     var sudadera_nike = new Sudadera("gris", "Manga Larga", "Nike", "L", 400);
     sudadera_nike.setCapucha(true);
     sudadera_nike.setColor("Negro");
     console.log(sudadera_nike);
-    var camiseta = new Clases("Rojo", "Manga larga", "Nike", "L", 250);
-    console.log(camiseta);
 });
