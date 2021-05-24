@@ -8,11 +8,15 @@ import { Zapato } from '../models/zapato';
 
 export class ZapatosComponent implements OnInit{
   // Propiedades
-  title: string;
+  public title: string;
   public zapatos: Array<Zapato>;
   public marcas: String[];
+  public color: string;
+  public mi_marca: string;
 
   constructor(){
+    this.mi_marca = "Adidas";
+    this.color = 'blue';
     this.marcas = new Array();
     this.title = "Componente de zapatos";
 
@@ -38,5 +42,13 @@ export class ZapatosComponent implements OnInit{
     });
 
     console.log(this.marcas)
+  }
+
+  getMarca(){
+    alert(this.mi_marca);
+  }
+
+  addMarca(){
+    this.marcas.push(this.mi_marca);
   }
 }
