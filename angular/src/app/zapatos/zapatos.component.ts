@@ -13,8 +13,10 @@ export class ZapatosComponent implements OnInit{
   public marcas: String[];
   public color: string;
   public mi_marca: string;
+  public slogan: string;
 
   constructor(){
+    this.slogan = "Compra los mejores tenis de las marcas"
     this.mi_marca = "Adidas";
     this.color = 'blue';
     this.marcas = new Array();
