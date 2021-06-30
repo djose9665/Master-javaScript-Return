@@ -8,8 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { ZapatosComponent } from './zapatos/zapatos.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
-import { Route } from '@angular/compiler/src/core';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
+import { Route } from '@angular/compiler/src/core';
 
 // Array de rutas
 
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
   {path: 'cursos', component: CursosComponent},
   {path: 'cursos/:nombre/:followers', component: CursosComponent},
   {path: 'externo', component: ExternoComponent},
+  {path: 'contacto', component: ContactoComponent },
+
   {path: '**', component: HomeComponent}
 ];
 
