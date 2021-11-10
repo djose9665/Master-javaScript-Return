@@ -13,6 +13,7 @@ import { ExternoComponent } from './externo/externo.component';
 
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
 import { ContactoComponent } from './contacto/contacto.component';
+import { PruebaComponent } from './prueba/prueba.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ExternoComponent,
     CalculadoraPipe,
     ContactoComponent,
+    PruebaComponent,
   ],
   imports: [
     BrowserModule,
